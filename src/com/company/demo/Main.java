@@ -5,7 +5,15 @@ import java.util.ArrayList;
 public class Main {
 
      Question2 question2 = new Question2();
-    public static void main(String[] args) {
+     public static void main(String[] args) {
+
+        //Question 1
+
+        Question1 question1 = new Question1();
+        question1.findAllGrandChildren("Dasarathan");
+
+
+        //Question 2
 
         String groom = "Ajay";
         String bride = "Divya";
