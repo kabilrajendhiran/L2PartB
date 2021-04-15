@@ -50,7 +50,7 @@ public class Question1 {
             count ++;
         }
 
-        System.out.println("\n\nThe number of Grand Children for "+ name+" = " +count);
+        System.out.println("\nThe number of Grand Children for "+ name+" = " +count);
     }
 
 

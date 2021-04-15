@@ -8,23 +8,15 @@ public class Main {
      public static void main(String[] args) {
 
         //Question 1
-
+         System.out.println("Question 1\n");
         Question1 question1 = new Question1();
         question1.findAllGrandChildren("Dasarathan");
 
 
+         System.out.println("\nQuestion 2\n");
         //Question 2
 
-
-        Question1 question1 = new Question1();
-        question1.findAllGrandChildren("Dasarathan");
-
-
-
-
-
-
-       /* String groom = "Ajay";
+        String groom = "Ajay";
         String bride = "Divya";
 
         Main main = new Main();
@@ -35,7 +27,7 @@ public class Main {
 
         System.out.println("Grooms for "+ bride);
         main.findGrooms(bride);
-        System.out.println();*/
+        System.out.println();
     }
 
     private static void printArray(ArrayList<DataModel> arrayList)
