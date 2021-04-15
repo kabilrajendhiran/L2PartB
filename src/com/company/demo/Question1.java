@@ -9,9 +9,12 @@ package com.company.demo;
 *
 * */
 
+import java.util.ArrayList;
+
 public class Question1 {
     String arr[][] = {
             {"Lava" , "Rama"},
+            {"Lava's Son1", "Lava"},{"Lava's Son2", "Lava"},{"Lava's Son3", "Lava"},
             {"Kusha" , "Rama"} ,
             {"Rama" , "Dasarathan"},
             {"Lakshman" , "Dasarathan"} ,
@@ -41,8 +44,9 @@ public class Question1 {
 
     public void findAllGrandChildren(String name)
     {
-        int count = -setChildren(name,false);
 
+        int count = -setChildren(name,false);
+        int size = stack.sizeOfStack();
         while (!stack.isStackEmpty())
         {
             String data = stack.popFromStack();
@@ -50,8 +54,49 @@ public class Question1 {
             count ++;
         }
 
-        System.out.println("\nThe number of Grand Children for "+ name+" = " +count);
+        System.out.println("\nThe number of Grand Children for "+ name+" = " +(count));
     }
+
+    public ArrayList<String> findGrandChildren(String name)
+    {
+        int count = -setChildren(name,false);
+
+        ArrayList<String> grandChildren = new ArrayList<>();
+        while (!stack.isStackEmpty())
+        {
+            String data = stack.popFromStack();
+            grandChildren.add(data);
+        }
+
+        for (int i = 0; i < grandChildren.size(); i++) {
+            setChildren(grandChildren.get(i),false);
+        }
+
+        return grandChildren;
+    }
+
+    public void findGreatGrandChildren(String name)
+    {
+        int count  = 0;
+        findGrandChildren(name);
+        int size = stack.sizeOfStack();
+        while (!stack.isStackEmpty())
+        {
+            count++;
+            String name1 = stack.popFromStack();
+            setChildren(name1,true);
+        }
+
+        
+        System.out.println("\nThe number of Great Grand Children for "+ name+" = " +(count-size));
+
+
+    }
+
+
+
+
+
 
 
 }

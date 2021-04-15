@@ -11,9 +11,10 @@ public class Main {
          System.out.println("Question 1\n");
         Question1 question1 = new Question1();
         question1.findAllGrandChildren("Dasarathan");
+        question1.findGreatGrandChildren("Dasarathan");
 
 
-         System.out.println("\nQuestion 2\n");
+     /*    System.out.println("\nQuestion 2\n");
         //Question 2
 
         String groom = "Ajay";
@@ -27,7 +28,7 @@ public class Main {
 
         System.out.println("Grooms for "+ bride);
         main.findGrooms(bride);
-        System.out.println();
+        System.out.println();*/
     }
 
     private static void printArray(ArrayList<DataModel> arrayList)
